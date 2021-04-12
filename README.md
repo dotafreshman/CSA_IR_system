@@ -3,6 +3,9 @@
 `jionlp`
 `snownlp`
 `rank_bm25`
+
+`flask`
+
 ## 页面使用
 1. 下载文件
 2. 在命令行输入指令`python system.py`,启动程序 

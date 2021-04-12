@@ -117,8 +117,10 @@ function fHl(o, flag, rndColor, url){
         bgCor=fRndCor(10, 20);
         fgCor=fRndCor(230, 255);
     } else {
-        bgCor='#F0F';
-        fgCor='black';
+        // bgCor='#F0F';
+        bgCor = '#D32D2D'
+        // fgCor='black';
+        fgCor='yellow'
     }
     var re=new RegExp(flag, 'i');
     for(var i=0; i<o.childNodes.length; i++){
@@ -182,7 +184,7 @@ function fHl(o, flag, rndColor, url){
 }
     //--------end function fHl(o, flag, rndColor, url)--------------------//
 var tar = document.getElementById("key").innerHTML
-fHl(document.body, tar);
+fHl(document.body, tar, false);
 console.log(name)
 //]]>
 
