@@ -44,7 +44,7 @@ def process(key_phrase):
 
 def addQ(query, lis):
     for i in range(len(lis)):
-        lis[i] = re.sub(query,' [ '+query+' ] ', lis[i])
+        lis[i] = re.sub(query,' <span> '+query+' </span> ', lis[i])
     return lis
 
 
@@ -144,7 +144,7 @@ def system():
         query = request.form['query']
         # thesystem(queries, textname, tofile);
         textlist = thesystem(query)
-        textlist = ['搜索关键词：'+query]+['\n']+addQ(query,list(textlist))
+        textlist = [query]+['\n']+addQ(query,list(textlist))
         return render_template('index.html', name=1, movies=textlist)
     return render_template('index.html', names=0)
 
